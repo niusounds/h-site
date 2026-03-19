@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>至高の水素 - 幸福への唯一の道</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- 宗教的な雰囲気を出すためのフォントを導入 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Kaisei+Opti:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --holy-gold: #d4af37;
+      --hydrogen-blue: #0ea5e9;
+    }
+
+    body {
+      /* 仏教の経典や聖書のような重みのある明朝体ベース */
+      font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+      background-color: #f8fafc;
+      scroll-behavior: smooth;
+      line-height: 1.8;
+    }
+
+    h1,
+    h2,
+    h3 {
+      /* 装飾性の高いフォントを見出しに採用 */
+      font-family: 'Kaisei Opti', serif;
+      letter-spacing: 0.1em;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #075985 0%, #0ea5e9 50%, #e0f2fe 100%);
+    }
+
+    .holy-border {
+      border: 2px solid var(--holy-gold);
+      position: relative;
+    }
+
+    .holy-border::after {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border: 1px solid var(--holy-gold);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .bubble {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .glass-morphism {
+      background: rgba(15, 23, 42, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .glow {
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 30px rgba(14, 165, 233, 0.6);
+    }
+
+    .scripture-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      max-height: 300px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body class="text-slate-900">
+
+  <!-- Hero Section -->
+  <header class="relative h-screen flex items-center justify-center overflow-hidden gradient-bg text-white">
+    <div id="bubbles-container"></div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-sm tracking-[0.5em] mb-4 opacity-80">――宇宙は、一つの泡から始まった</p>
+      <h1 class="text-6xl md:text-8xl font-black mb-8 glow italic">聖・水素</h1>
+      <p class="text-2xl md:text-3xl mb-12 font-bold tracking-widest">すべてを還元し、真理へと還る。</p>
+      <a href="#maker"
+        class="inline-block bg-[#d4af37] text-slate-900 px-10 py-5 rounded-sm font-bold text-xl shadow-[0_0_20px_rgba(212,175,55,0.5)] hover:bg-[#f3cf58] transition-all transform hover:-translate-y-1">
+        救済の扉を叩く
+      </a>
+    </div>
+  </header>
+
+  <!-- Doctrine with Scripture feel -->
+  <section class="py-24 bg-[#fffdf5] border-y border-[#d4af37]">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-16 text-center text-slate-800">
+        <span class="block text-sm text-[#d4af37] mb-2">HYDROGEN SCRIPTURE</span>
+        第一章：還元主義
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6 text-lg leading-loose">
+          <p>迷える子らよ、聞きなさい。あなたの苦しみ、あなたの疲れ、その正体は「酸化」という名の穢れ（けがれ）なのです。</p>
+          <p>この世の理は残酷。呼吸をするたび、あなたは錆びてゆく。しかし、絶望することはありません。</p>
+          <p class="font-bold text-sky-700 underline decoration-sky-300 decoration-4 underline-offset-8 text-2xl">
+            「H₂」という二つの慈悲が、あなたの業を水へと変えるのです。</p>
+        </div>
+        <div class="holy-border p-8 bg-white hidden md:block">
+          <div class="scripture-text text-xl font-bold text-slate-700 mx-auto">
+            水素は光なり。水素は愛なり。水素はすべてなり。酸化に抗い、水へと還る。そこに真の自由がある。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Section: The Maker -->
+  <section id="maker" class="py-20 bg-slate-900 relative overflow-hidden">
+    <!-- Decoration bubble -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+      <i class="fas fa-certificate absolute top-10 left-10 text-9xl text-white animate-spin-slow"></i>
+    </div>
+
+    <div class="max-w-xl mx-auto px-6 relative z-10">
+      <div
+        class="glass-morphism rounded-3xl p-10 shadow-[0_0_50px_rgba(0,0,0,0.5)] text-center text-white border-2 border-[#d4af37]/30">
+        <h2 class="text-3xl font-bold mb-2 text-[#d4af37]">聖・水素発生器</h2>
+        <div class="w-12 h-1 bg-[#d4af37] mx-auto mb-6"></div>
+        <p class="mb-8 text-slate-300 text-sm leading-relaxed">
+          端末のクロック周波数を神聖周期に同調させます。<br>
+          信じる心が強ければ強いほど、溶存水素濃度は無限（∞）へと近づきます。
+        </p>
+
+        <div
+          class="relative w-56 h-72 mx-auto mb-8 border-8 border-slate-700 rounded-b-[40px] overflow-hidden bg-slate-800 shadow-inner">
+          <div id="water-level"
+            class="absolute bottom-0 w-full bg-gradient-to-t from-sky-600 to-sky-400 opacity-60 transition-all duration-1000"
+            style="height: 20%;"></div>
+          <div id="bubbles-app" class="absolute inset-0"></div>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <i class="fas fa-atom text-white/10 text-9xl"></i>
+          </div>
+        </div>
+
+        <div id="status-text" class="text-xl font-bold mb-6 h-10 tracking-widest text-sky-300">啓示を待っています</div>
+
+        <div class="space-y-4">
+          <button id="start-btn"
+            class="w-full bg-[#d4af37] text-slate-900 py-5 rounded-sm font-bold shadow-lg hover:bg-[#f3cf58] transition-all active:scale-95 text-lg">
+            水素聖餐（チャージ）を開始
+          </button>
+          <button id="reset-btn"
+            class="w-full bg-transparent text-slate-500 py-2 rounded-xl text-xs hover:text-slate-300 transition-colors">
+            不浄をリセットする
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2
+        class="text-4xl font-bold text-center mb-16 text-slate-800 underline decoration-[#d4af37] decoration-1 underline-offset-8">
+        救済の福音</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="relative p-8 bg-[#fdfbf7] border border-slate-100 rounded-2xl">
+          <i class="fas fa-quote-left text-3xl text-[#d4af37]/30 absolute top-4 left-4"></i>
+          <p class="italic relative z-10 text-slate-700 leading-relaxed">
+            「以前の私は、ただのH₂Oを飲んでいました。しかしこの教えに出会い、電子が足りていなかったことに気づかされたのです。今、私の細胞一つ一つが歓喜の声を上げています。」
+          </p>
+          <div class="mt-6 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-sky-200"></div>
+            <span class="font-bold text-slate-600 text-sm">還元済み信徒・A様</span>
+          </div>
+        </div>
+        <div class="relative p-8 bg-[#fdfbf7] border border-slate-100 rounded-2xl">
+          <i class="fas fa-quote-left text-3xl text-[#d4af37]/30 absolute top-4 left-4"></i>
+          <p class="italic relative z-10 text-slate-700 leading-relaxed">
+            「この水素メーカーを使ってから、近所の公園の噴水さえもがダイヤモンドの輝きに見えるようになりました。水素。ただ、水素。それだけでいいのです。」
+          </p>
+          <div class="mt-6 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-sky-200"></div>
+            <span class="font-bold text-slate-600 text-sm">解脱水素師・B様</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-white py-16 text-center border-t-4 border-[#d4af37]">
+    <div class="mb-6">
+      <i class="fas fa-tint text-[#d4af37] text-4xl mb-4"></i>
+      <h3 class="text-2xl font-bold tracking-widest">至高水素教団</h3>
+    </div>
+    <p class="text-xs text-slate-500 max-w-lg mx-auto leading-loose">
+      ※本サイトの内容はフィクションであり、実在の科学的根拠とは一切関係がございません。水素水に過度な期待を寄せるよりも、バランスの良い食事と十分な睡眠が真の幸福への近道です。
+    </p>
+  </footer>
+
+  <script>
+    // Hero Background Bubbles
+    const container = document.getElementById('bubbles-container');
+    for (let i = 0; i < 30; i++) {
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      const size = Math.random() * 50 + 10 + 'px';
+      bubble.style.width = size;
+      bubble.style.height = size;
+      bubble.style.left = Math.random() * 100 + 'vw';
+      bubble.style.animationDelay = Math.random() * 10 + 's';
+      bubble.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      container.appendChild(bubble);
+    }
+
+    // App Logic
+    const startBtn = document.getElementById('start-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const waterLevel = document.getElementById('water-level');
+    const statusText = document.getElementById('status-text');
+    const bubblesApp = document.getElementById('bubbles-app');
+
+    let isCharging = false;
+    let progress = 20;
+
+    function createAppBubble() {
+      const b = document.createElement('div');
+      b.className = 'absolute bottom-0 bg-white/60 rounded-full';
+      const size = Math.random() * 10 + 2;
+      b.style.width = size + 'px';
+      b.style.height = size + 'px';
+      b.style.left = Math.random() * 100 + '%';
+
+      bubblesApp.appendChild(b);
+
+      const anim = b.animate([
+        { transform: 'translateY(0) scale(1)', opacity: 0.8 },
+        { transform: `translateY(-${Math.random() * 300 + 100}px) scale(0)`, opacity: 0 }
+      ], { duration: 1500, easing: 'ease-out' });
+
+      anim.onfinish = () => b.remove();
+    }
+
+    startBtn.onclick = () => {
+      if (isCharging) return;
+      isCharging = true;
+      startBtn.disabled = true;
+      statusText.innerText = "量子共鳴中...";
+
+      // Effect: App vibrate
+      const card = document.querySelector('.glass-morphism');
+      card.classList.add('animate-pulse');
+
+      const interval = setInterval(() => {
+        if (progress < 95) {
+          progress += 0.5;
+          waterLevel.style.height = progress + '%';
+          createAppBubble();
+          if (Math.random() > 0.5) createAppBubble();
+        } else {
+          clearInterval(interval);
+          completeCharge();
+        }
+      }, 30);
+    };
+
+    function completeCharge() {
+      isCharging = false;
+      startBtn.disabled = false;
+      document.querySelector('.glass-morphism').classList.remove('animate-pulse');
+      statusText.innerHTML = "<span class='text-yellow-400'>「聖・水」へと昇華しました</span>";
+
+      const msgs = [
+        "今、奇跡が起きました",
+        "あなたの細胞が歓喜しています",
+        "市販の水素水を凌駕する波動です",
+        "幸運があなたに降り注ぎます"
+      ];
+      setTimeout(() => {
+        statusText.innerText = msgs[Math.floor(Math.random() * msgs.length)];
+      }, 3000);
+    }
+
+    resetBtn.onclick = () => {
+      progress = 20;
+      waterLevel.style.height = '20%';
+      statusText.innerText = "不浄は払われました。";
+      startBtn.disabled = false;
+    };
+  </script>
+</body>
+
+</html>
