@@ -111,6 +111,7 @@
 
 <body class="text-slate-900 flex flex-col min-h-screen">
 
+  {% unless page.hide_nav %}
   <nav class="bg-slate-950 text-white p-4 sticky top-0 z-50 border-b border-[#d4af37]">
     <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
       <a href="{{ '/' | relative_url }}" class="font-bold tracking-widest text-[#d4af37] flex items-center gap-2">
@@ -118,10 +119,12 @@
       </a>
       <div class="flex gap-6 text-sm">
         <a href="{{ '/' | relative_url }}" class="hover:text-sky-300 transition-colors">ホーム</a>
+        <a href="{{ '/reiwa/' | relative_url }}" class="hover:text-sky-300 transition-colors font-bold text-sky-400">令和最新モデル</a>
         <a href="{{ '/blog/' | relative_url }}" class="hover:text-sky-300 transition-colors">啓示一覧</a>
       </div>
     </div>
   </nav>
+  {% endunless %}
 
   <main class="flex-grow">
     {{ content }}
