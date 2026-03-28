@@ -1,0 +1,36 @@
+---
+layout: default
+title: 啓示一覧（ブログ）
+permalink: /blog/
+---
+
+<div class="max-w-4xl mx-auto px-6 py-24">
+  <div class="text-center mb-16">
+    <h1 class="text-5xl font-bold mb-4 text-[#d4af37] glow">啓示一覧</h1>
+    <p class="text-slate-500">宇宙からのメッセージ、そして水素の真理</p>
+  </div>
+
+  <div class="space-y-8">
+    {% for post in site.posts %}
+    <article class="bg-white p-8 rounded-2xl border-2 border-slate-100 hover:border-[#d4af37]/50 shadow-sm hover:shadow-xl transition-all">
+      <div class="flex flex-col md:flex-row gap-6 items-start">
+        <div class="flex-grow">
+          <time class="text-sm font-bold text-[#d4af37] tracking-widest block mb-2">{{ post.date | date: "%Y年%m月%d日" }}</time>
+          <h2 class="text-2xl font-bold mb-4 text-slate-800">
+            <a href="{{ post.url | relative_url }}" class="hover:text-sky-600 transition-colors">{{ post.title }}</a>
+          </h2>
+          <p class="text-slate-600 leading-relaxed mb-6">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <a href="{{ post.url | relative_url }}" class="inline-flex items-center text-sm font-bold text-sky-600 hover:text-sky-800 transition-colors">
+            真理を探求する <i class="fas fa-chevron-right ml-2 text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+    {% else %}
+    <div class="text-center py-12 text-slate-500 bg-slate-50 border border-slate-200 rounded-xl">
+      <i class="fas fa-book-open text-4xl mb-4 opacity-50"></i>
+      <p>まだ啓示は下されていません。水素を摂取し、祈りましょう。</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>

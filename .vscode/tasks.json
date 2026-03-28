@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Jekyll Build",
+      "type": "shell",
+      "command": "jekyll build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "Jekyllサイトをビルドします"
+    },
+    {
+      "label": "Jekyll Serve",
+      "type": "shell",
+      "command": "jekyll serve --livereload",
+      "isBackground": true,
+      "group": "test",
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Configuration file:",
+          "endsPattern": "Server running..."
+        }
+      },
+      "detail": "Jekyllサーバーを起動し、変更を自動でリロードします"
+    }
+  ]
+}

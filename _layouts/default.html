@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Kaisei+Opti:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --holy-gold: #d4af37;
+      --hydrogen-blue: #0ea5e9;
+    }
+
+    body {
+      font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+      background-color: #f8fafc;
+      scroll-behavior: smooth;
+      line-height: 1.8;
+    }
+
+    h1, h2, h3 { font-family: 'Kaisei Opti', serif; letter-spacing: 0.1em; }
+    .gradient-bg { background: linear-gradient(135deg, #075985 0%, #0ea5e9 50%, #e0f2fe 100%); }
+    .holy-border { border: 2px solid var(--holy-gold); position: relative; }
+    .holy-border::after { content: ''; position: absolute; inset: -5px; border: 1px solid var(--holy-gold); opacity: 0.5; pointer-events: none; }
+    .bubble { position: absolute; background: rgba(255, 255, 255, 0.3); border-radius: 50%; pointer-events: none; animation: rise 10s infinite ease-in; }
+    @keyframes rise { 0% { transform: translateY(100vh) scale(0); opacity: 0; } 50% { opacity: 0.6; } 100% { transform: translateY(-10vh) scale(1.5); opacity: 0; } }
+    .glass-morphism { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.3); }
+    .glow { text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 30px rgba(14, 165, 233, 0.6); }
+    .scripture-text { writing-mode: vertical-rl; text-orientation: mixed; max-height: 300px; margin: 0 auto; }
+    
+    /* Markdown Article Styles */
+    .prose p { margin-bottom: 1.5em; }
+    .prose h1, .prose h2, .prose h3 { margin-top: 2em; margin-bottom: 1em; color: #1e293b; }
+    .prose a { color: #0284c7; text-decoration: underline; }
+  </style>
+</head>
+
+<body class="text-slate-900 flex flex-col min-h-screen">
+
+  <nav class="bg-slate-950 text-white p-4 sticky top-0 z-50 border-b border-[#d4af37]">
+    <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+      <a href="{{ '/' | relative_url }}" class="font-bold tracking-widest text-[#d4af37] flex items-center gap-2">
+        <i class="fas fa-tint"></i> 至高の水素
+      </a>
+      <div class="flex gap-6 text-sm">
+        <a href="{{ '/' | relative_url }}" class="hover:text-sky-300 transition-colors">ホーム</a>
+        <a href="{{ '/blog/' | relative_url }}" class="hover:text-sky-300 transition-colors">啓示一覧</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-white py-16 text-center border-t-4 border-[#d4af37]">
+    <div class="mb-6">
+      <i class="fas fa-tint text-[#d4af37] text-4xl mb-4"></i>
+      <h3 class="text-2xl font-bold tracking-widest">至高水素教団</h3>
+    </div>
+    <p class="text-xs text-slate-500 max-w-lg mx-auto leading-loose">
+      ※本サイトの内容はフィクションであり、実在の科学的根拠とは一切関係がございません。水素水に過度な期待を寄せるよりも、バランスの良い食事と十分な睡眠が真の幸福への近道です。
+    </p>
+  </footer>
+
+</body>
+
+</html>

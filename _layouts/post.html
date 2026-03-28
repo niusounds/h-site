@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="max-w-4xl mx-auto px-6 py-24">
+  <header class="mb-16 text-center">
+    <time class="text-[#d4af37] font-bold tracking-widest text-sm mb-4 block">{{ page.date | date: "%Y年%m月%d日" }}</time>
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">{{ page.title }}</h1>
+    <div class="w-16 h-1 bg-sky-200 mx-auto"></div>
+  </header>
+
+  <div class="prose prose-lg prose-slate mx-auto leading-loose text-slate-700">
+    {{ content }}
+  </div>
+
+  <div class="mt-20 pt-8 border-t border-slate-200 text-center">
+    <a href="{{ '/blog/' | relative_url }}" class="inline-flex items-center text-sky-600 hover:text-sky-800 font-bold transition-colors">
+      <i class="fas fa-arrow-left mr-2"></i> 啓示一覧へ戻る
+    </a>
+  </div>
+</article>
